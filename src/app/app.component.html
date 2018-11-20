@@ -1,20 +1,65 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    Página <u>{{ title }}!</u>
   </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  <img width="50" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div style="padding-left: 100px;">
+  
+    <!-- Ejemplo ngStyle-->
+    <div class="container main-container"> <!-- (main-container) clase del styles.css -->
+      <h3>Ejemplos <small>de directivas, componentes, atributos...</small></h3>
+      <hr>
+    </div>
+    <div>
+        <i class="fa fa-2x fa-star">
+          <a href="https://angular.io/api/common/NgStyle"><h5>ngStyle</h5></a>
+        </i>
+        <p>Creo componente (ng g c components/ngStyle -it -is)</p>
+        <p>Lo llamamos a <strong>ng-style.components.ts</strong> con: app-ng-style</p>        
+        <app-ng-style>
+          </app-ng-style>
+      <app-css>
+      </app-css>
+      
+        <p>Creo componente (ng g c components/css -it -is)</p>
+        <p>Lo llamamos a <strong>css.components.ts</strong> con: app-css</p>
+        <p>Se aplica a un solo componente como este  app-css !</p>
+      <hr>
+
+
+ <!-- Ejemplo ngClass-->
+        <i class="fa fa-2x fa-star">
+            <a href="https://angular.io/api/common/NgClass"><h5>ngClass</h5></a>
+        </i>
+        <p>Creo componente (ng g c components/class -it -is)</p>
+        <p>Lo llamamos a <strong>class.components.ts</strong> con: app-css</p>
+        <p>Aplicar componente a una clase app-css !</p>
+        <app-clases></app-clases>
+      <hr>
+
+
+     <!-- Ejemplo directivas, la directiva la pasamos igual que un atributo--> 
+      <p appResaltado>En <u>directive.ts</u> haciendo un <strong>import  ElementRef,  HostListener</strong> </p>
+      <p appResaltado>y creando dentro de una función  <strong>el.nativeElement.style.backgroundColor = green</strong> </p>
+      <p>Cuando pasemos el mouse por encima del texto cambiará a color verde !</p>
+      <p>Y cuando salimos de encima del texto se quitará el color !</p>
+      <br>
+      <p>Si queremos pasar el atributo "Orange"</p>
+      <p [appResaltado]="'orange'">
+        Color naranja asignado
+      </p>
+      <br>
+      <hr>
+      <!-- Ejemplo ngSwitch-->
+      <h4>ngSwitch</h4>
+      <app-ng-switch></app-ng-switch>
+      <br>
+      <hr>
+
+    </div>
+</div>
+
+
 
